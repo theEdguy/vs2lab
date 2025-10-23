@@ -23,6 +23,11 @@ class Server:
         self.sock.bind((const_cs.HOST, const_cs.PORT))
         self.sock.settimeout(3)  # time out in order not to block forever
         self._logger.info("Server bound to socket " + str(self.sock))
+        self.phonebook = {
+            "Alice": "12345",
+            "Bob": "67890",
+            "Charlie": "54321"
+        }
 
     def serve(self):
         """ Serve echo """
@@ -31,11 +36,26 @@ class Server:
             try:
                 # pylint: disable=unused-variable
                 (connection, address) = self.sock.accept()  # returns new socket and address of client
+                self._logger.info(f"Connected by {address}")
                 while True:  # forever
                     data = connection.recv(1024)  # receive data from client
                     if not data:
                         break  # stop if client stopped
-                    connection.send(data + "*".encode('ascii'))  # return sent data plus an "*"
+                    msg = data.decode("ascii")
+                    if msg.startswith("GET:"):
+                        name = msg[4:]
+                        if name in self.phonebook:
+                            response = f"{name}:{self.phonebook[name]}\n"
+                            connection.sendall(response.encode('ascii'))
+                        else:
+                            response = "ERROR:WrongName\n"
+                            connection.sendall(response.encode('ascii'))
+                    elif msg == "GETALL":
+                        response = "".join([f"{n}:{num}\n" for n, num in self.phonebook.items()])
+                        connection.sendall(response.encode('ascii'))
+                    else:
+                        connection.sendall(b"ERROR:UnknownCommand\n")
+                        connection.close()
                 connection.close()  # close the connection
             except socket.timeout:
                 pass  # ignore timeouts
@@ -54,6 +74,26 @@ class Client:
 
     def call(self, msg_in="Hello, world"):
         """ Call server """
+        self.sock.send(msg_in.encode('ascii'))  # send encoded string as data
+        data = self.sock.recv(1024)  # receive the response
+        msg_out = data.decode('ascii')
+        print(msg_out)  # print the result
+        self.sock.close()  # close the connection
+        self.logger.info("Client down.")
+        return msg_out
+    
+    def GET(self):
+        print("Who are you looking for? : ")
+        name="GET:" + input()
+        self.sock.send(name.encode('ascii'))  # send encoded string as data
+        data = self.sock.recv(1024)  # receive the response
+        msg_out = data.decode('ascii')
+        print(msg_out)  # print the result
+        self.sock.close()  # close the connection
+        self.logger.info("Client down.")
+        return msg_out
+    
+    def GETALL(self, msg_in="GETALL"):
         self.sock.send(msg_in.encode('ascii'))  # send encoded string as data
         data = self.sock.recv(1024)  # receive the response
         msg_out = data.decode('ascii')
