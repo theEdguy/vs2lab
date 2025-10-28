@@ -11,6 +11,8 @@ ipython = "*"
 jupyter = "*"
 jupyter_server = "*"
 ipyparallel = "*"
+notebook = "*"
+ipykernel = "*"
 
 [dev-packages]
 pylint = "*"
