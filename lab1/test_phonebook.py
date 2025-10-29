@@ -23,29 +23,32 @@ class TestPhonebook(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        # Server stoppen
-        cls.server._serving = False # Interne Variable zum Stoppen der Schleife
-        cls.server_thread.join(timeout=1.0)
+        """ STOPPT den Server, nachdem alle Tests gelaufen sind """
+        logging.info("=== Stoppe Server nach Tests ===")
+        cls.server.close() # Signalisiert der 'serve'-Schleife zu stoppen
+        cls.server_thread.join(timeout=1.0) # Wartet kurz, bis der Thread sich beendet
+        logging.info("=== Server gestoppt ===")
+
         
     def test_01_get_success(self):
         """ Testet eine erfolgreiche GET-Anfrage """
         logging.info("Starte test_01_get_success")
         client = clientserver.Client() # Neuer Client für jeden Test
-        result = client.get("Bob")
+        result = client.GET("Bob")
         self.assertEqual(result, "Bob:67890")
 
     def test_02_get_fail(self):
         """ Testet eine fehlschlagende GET-Anfrage (falscher Name) """
         logging.info("Starte test_02_get_fail")
         client = clientserver.Client()
-        result = client.get("David")
+        result = client.GET("David")
         self.assertEqual(result, "ERROR:WrongName")
 
     def test_03_get_all(self):
         """ Testet die GETALL-Anfrage """
         logging.info("Starte test_03_get_all")
         client = clientserver.Client()
-        result = client.get_all()
+        result = client.GETALL()
         # Prüfen, ob alle Namen aus dem Telefonbuch in der Antwort enthalten sind
         self.assertIn("Alice:12345", result)
         self.assertIn("Bob:67890", result)

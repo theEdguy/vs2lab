@@ -95,3 +95,364 @@
 2025-10-29 16:06:50,337 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
 2025-10-29 16:06:52,551 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 59032), raddr=('127.0.0.1', 50007)>
 2025-10-29 16:07:31,652 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=81, family=2, type=1, proto=0, laddr=('127.0.0.1', 47438), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:23:19,637 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:24:26,753 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 39340), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:24:26,753 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 39340)
+2025-10-29 16:24:26,754 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:24:26,762 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 39346), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:24:26,762 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 39346)
+2025-10-29 16:24:26,763 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:36:22,109 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 53352)
+2025-10-29 16:36:22,109 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 53352), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:36:22,109 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 53352), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:36:29,061 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 53366)
+2025-10-29 16:36:29,061 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 53366), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:36:29,062 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:36:29,071 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 53374), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:36:29,071 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 53374)
+2025-10-29 16:36:29,072 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:36:29,110 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 53388)
+2025-10-29 16:36:29,110 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 53388), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:36:47,247 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 60328), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:36:47,247 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60328)
+2025-10-29 16:36:47,248 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:36:47,257 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 60336), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:36:47,257 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60336)
+2025-10-29 16:36:47,258 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:36:47,287 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60338)
+2025-10-29 16:36:47,288 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 60338), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:41:44,278 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:41:51,147 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 50494)
+2025-10-29 16:41:51,147 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50494), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:41:51,148 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:41:51,161 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50508), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:41:51,161 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 50508)
+2025-10-29 16:41:51,162 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:41:51,195 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 50518)
+2025-10-29 16:41:51,195 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50518), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:41:51,197 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:42:34,809 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 56068), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:42:34,809 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 56068)
+2025-10-29 16:42:34,810 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:42:34,818 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 56076)
+2025-10-29 16:42:34,818 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 56076), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:42:34,819 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:42:34,850 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 56088)
+2025-10-29 16:42:34,850 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 56088), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:42:34,852 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:44:18,906 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:18,906 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,407 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55098), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,408 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55098)
+2025-10-29 16:44:19,407 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55098), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,408 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55098)
+2025-10-29 16:44:19,420 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55104), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,420 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55104)
+2025-10-29 16:44:19,420 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55104), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,420 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55104)
+2025-10-29 16:44:19,422 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55110), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,422 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55110)
+2025-10-29 16:44:19,422 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55110), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,422 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55110)
+2025-10-29 16:44:19,424 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55116), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,424 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55116)
+2025-10-29 16:44:19,424 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 55116), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:44:19,424 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55116)
+2025-10-29 16:45:29,774 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:29,774 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,275 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36516), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,275 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36516)
+2025-10-29 16:45:30,275 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36516), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,275 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36516)
+2025-10-29 16:45:30,276 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:45:30,276 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:45:30,277 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36522), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,278 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36522)
+2025-10-29 16:45:30,277 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36522), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,278 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36522)
+2025-10-29 16:45:30,278 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:45:30,278 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:45:30,279 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36530), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,279 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36530)
+2025-10-29 16:45:30,279 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36530), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,279 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36530)
+2025-10-29 16:45:30,280 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:45:30,280 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:45:30,280 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36536), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,280 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36536)
+2025-10-29 16:45:30,280 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 36536), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:45:30,280 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 36536)
+2025-10-29 16:47:03,731 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:03,731 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,232 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37240), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,233 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37240)
+2025-10-29 16:47:04,232 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37240), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,233 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37240)
+2025-10-29 16:47:04,234 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:04,234 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:04,241 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37252), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,241 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37252)
+2025-10-29 16:47:04,241 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37252), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,241 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37252)
+2025-10-29 16:47:04,242 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:04,242 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:04,243 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37258), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,243 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37258), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,243 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37258)
+2025-10-29 16:47:04,243 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37258)
+2025-10-29 16:47:04,244 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:04,244 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:04,244 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37264), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,244 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37264)
+2025-10-29 16:47:04,244 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37264), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:04,244 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37264)
+2025-10-29 16:47:51,965 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:51,965 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,466 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45938), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,466 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45938)
+2025-10-29 16:47:52,466 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45938), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,466 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45938)
+2025-10-29 16:47:52,467 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:52,467 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:52,468 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45944), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,468 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45944)
+2025-10-29 16:47:52,468 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45944), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,468 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45944)
+2025-10-29 16:47:52,469 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:52,469 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:52,469 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45960), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,469 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45960)
+2025-10-29 16:47:52,469 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45960), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,469 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45960)
+2025-10-29 16:47:52,470 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:52,470 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:47:52,471 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45966), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,471 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45966)
+2025-10-29 16:47:52,471 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 45966), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:47:52,471 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 45966)
+2025-10-29 16:51:14,701 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:14,701 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,203 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37766), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,203 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37766)
+2025-10-29 16:51:15,203 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37766), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,203 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37766)
+2025-10-29 16:51:15,204 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:51:15,204 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:51:15,206 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37774), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,206 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37774)
+2025-10-29 16:51:15,206 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37774), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,206 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37774)
+2025-10-29 16:51:15,206 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:51:15,206 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:51:15,207 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37788), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,207 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37788), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,207 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37788)
+2025-10-29 16:51:15,207 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37788)
+2025-10-29 16:51:15,208 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:51:15,208 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:51:15,209 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37802), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,209 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37802), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:51:15,209 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37802)
+2025-10-29 16:51:15,209 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 37802)
+2025-10-29 16:55:28,365 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,365 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,866 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60262), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,866 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60262)
+2025-10-29 16:55:28,866 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60262), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,866 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60262)
+2025-10-29 16:55:28,868 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:55:28,868 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:55:28,869 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60264), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,869 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60264)
+2025-10-29 16:55:28,869 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60264), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,869 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60264)
+2025-10-29 16:55:28,870 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:55:28,870 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:55:28,871 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60274), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,871 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60274)
+2025-10-29 16:55:28,871 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60274), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,871 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60274)
+2025-10-29 16:55:28,871 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:55:28,871 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:55:28,872 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60278)
+2025-10-29 16:55:28,872 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60278), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:55:28,872 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 60278)
+2025-10-29 16:55:28,872 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 60278), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,176 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,176 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,677 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43276), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,677 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43276)
+2025-10-29 16:57:37,677 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43276), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,677 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43276)
+2025-10-29 16:57:37,678 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:57:37,678 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:57:37,678 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43278), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,678 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43278)
+2025-10-29 16:57:37,678 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43278), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,678 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43278)
+2025-10-29 16:57:37,678 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:57:37,678 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:57:37,679 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43284), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,679 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43284)
+2025-10-29 16:57:37,679 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43284), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,679 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43284)
+2025-10-29 16:57:37,679 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:57:37,679 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:57:37,680 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43288), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,680 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43288)
+2025-10-29 16:57:37,680 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 43288), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:57:37,680 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 43288)
+2025-10-29 16:59:12,298 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 16:59:19,158 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 48694)
+2025-10-29 16:59:19,158 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 48694), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:59:19,160 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:59:19,168 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 48700)
+2025-10-29 16:59:19,168 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 48700), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:59:19,169 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 16:59:19,203 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 48706)
+2025-10-29 16:59:19,203 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 48706), raddr=('127.0.0.1', 50007)>
+2025-10-29 16:59:19,206 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:02:20,948 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 57090), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:02:20,949 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 57090)
+2025-10-29 17:02:20,950 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:02:20,961 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 57098)
+2025-10-29 17:02:20,961 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 57098), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:02:20,963 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:02:20,990 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 57104), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:02:20,990 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 57104)
+2025-10-29 17:02:20,992 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:02:40,847 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 41960)
+2025-10-29 17:02:40,847 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 41960), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:02:40,848 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:02:40,858 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 41964)
+2025-10-29 17:02:40,858 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 41964), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:02:40,859 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:02:40,888 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 41974)
+2025-10-29 17:02:40,888 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 41974), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:02:40,889 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:06:06,390 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 38542), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:06:06,390 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 38542)
+2025-10-29 17:06:06,391 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:06:06,401 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 38556)
+2025-10-29 17:06:06,401 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 38556), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:06:06,402 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:10:33,178 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 17:10:42,647 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 49134), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:10:42,647 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 49134)
+2025-10-29 17:10:42,648 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:10:42,656 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 49140)
+2025-10-29 17:10:42,656 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 49140), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:10:42,658 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:12:06,896 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 35060)
+2025-10-29 17:12:06,896 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 35060), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:12:06,897 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:12:06,908 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 35068), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:12:06,908 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 35068)
+2025-10-29 17:12:06,910 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:12:06,938 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 35078), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:12:06,938 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 35078)
+2025-10-29 17:12:06,940 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:12:06,951 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 35088)
+2025-10-29 17:12:06,951 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 35088), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:12:06,952 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:13:12,594 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 55822), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:13:12,594 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55822)
+2025-10-29 17:13:12,596 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:13:12,598 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 55836), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:13:12,598 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 55836)
+2025-10-29 17:13:12,599 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:15:57,646 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 56086), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:15:57,646 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 56086)
+2025-10-29 17:15:57,648 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:15:57,650 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 56098)
+2025-10-29 17:15:57,650 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 56098), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:15:57,651 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:16:19,939 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 53008), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:16:19,939 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 53008)
+2025-10-29 17:16:19,941 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:16:19,942 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 53016)
+2025-10-29 17:16:19,942 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 53016), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:25,836 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 33218), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:44,905 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,422 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 42110), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,422 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42110)
+2025-10-29 17:17:47,423 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,434 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42114)
+2025-10-29 17:17:47,434 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 42114), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,435 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,467 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42122)
+2025-10-29 17:17:47,467 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 42122), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,468 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,481 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 42124), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,481 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42124)
+2025-10-29 17:17:47,483 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,485 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42128)
+2025-10-29 17:17:47,485 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 42128), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,487 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,499 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 42142), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,499 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42142)
+2025-10-29 17:17:47,501 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,503 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 42144), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,503 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42144)
+2025-10-29 17:17:47,504 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,516 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 42152), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:17:47,516 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42152)
+2025-10-29 17:17:47,517 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:17:47,519 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 42158)
+2025-10-29 17:17:47,519 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=80, family=2, type=1, proto=0, laddr=('127.0.0.1', 42158), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:19:38,442 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 49584), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:19:47,508 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 39768), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:07,541 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,624 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34814)
+2025-10-29 17:21:17,625 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 34814), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,626 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,635 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34830)
+2025-10-29 17:21:17,635 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 34830), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,636 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,667 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 34834), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,667 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34834)
+2025-10-29 17:21:17,668 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,680 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 34840), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,680 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34840)
+2025-10-29 17:21:17,682 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,683 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 34854), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,683 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34854)
+2025-10-29 17:21:17,684 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,698 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 34866), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,698 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34866)
+2025-10-29 17:21:17,700 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,702 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34868)
+2025-10-29 17:21:17,702 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 34868), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,704 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,715 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34878)
+2025-10-29 17:21:17,715 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 34878), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:21:17,716 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:21:17,718 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 34892)
+2025-10-29 17:21:17,718 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 34892), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:51,073 - vs2lab.lab1.clientserver.Server - INFO - Server bound to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,341 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33796)
+2025-10-29 17:22:54,341 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 33796), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,343 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,359 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=78, family=2, type=1, proto=0, laddr=('127.0.0.1', 33808), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,359 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33808)
+2025-10-29 17:22:54,361 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,400 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33818)
+2025-10-29 17:22:54,400 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 33818), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,402 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,413 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 33828), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,413 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33828)
+2025-10-29 17:22:54,415 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,418 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 33836), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,418 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33836)
+2025-10-29 17:22:54,419 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,431 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 33850), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,431 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33850)
+2025-10-29 17:22:54,433 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,434 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 33860), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,435 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33860)
+2025-10-29 17:22:54,436 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,447 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 33868), raddr=('127.0.0.1', 50007)>
+2025-10-29 17:22:54,447 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33868)
+2025-10-29 17:22:54,449 - vs2lab.a1_layers.clientserver.Client - INFO - Client down.
+2025-10-29 17:22:54,450 - vs2lab.lab1.clientserver.Server - INFO - Connected by ('127.0.0.1', 33876)
+2025-10-29 17:22:54,450 - vs2lab.a1_layers.clientserver.Client - INFO - Client connected to socket <socket.socket fd=79, family=2, type=1, proto=0, laddr=('127.0.0.1', 33876), raddr=('127.0.0.1', 50007)>
