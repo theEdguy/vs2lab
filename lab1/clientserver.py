@@ -82,10 +82,9 @@ class Client:
         self.logger.info("Client down.")
         return msg_out
     
-    def GET(self):
-        print("Who are you looking for? : ")
-        name="GET:" + input()
-        self.sock.send(name.encode('ascii'))  # send encoded string as data
+    def GET(self, name):
+        string = "GET:" + name
+        self.sock.send(string.encode('ascii'))  # send encoded string as data
         data = self.sock.recv(1024)  # receive the response
         msg_out = data.decode('ascii')
         print(msg_out)  # print the result
