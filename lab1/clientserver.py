@@ -62,6 +62,9 @@ class Server:
         self.sock.close()
         self._logger.info("Server down.")
 
+        def close(self):
+            self.sock.close()
+
 
 class Client:
     """ The client """
