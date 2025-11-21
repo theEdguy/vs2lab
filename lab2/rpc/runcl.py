@@ -1,5 +1,6 @@
 import rpc
 import logging
+import time
 
 from context import lab_logging
 
@@ -13,9 +14,14 @@ def result_callback(result):
 cl = rpc.Client()
 cl.run()
 
-# Ede hier von Foo Bar auf Goodbye World geändert
+#von Foo Bar auf Goodbye World geändert
 base_list = rpc.DBList({'Goodbye'})
 result_list = cl.append('World', base_list, result_callback)
+
+for i in range(15):
+            print(f"Warte auf Antwort... {i+1}/15")
+            time.sleep(1)
+#thread.join()  # warte bis thread fertig ist
 
 cl.stop()
 
