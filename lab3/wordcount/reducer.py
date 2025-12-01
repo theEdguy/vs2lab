@@ -22,31 +22,30 @@ receiver.bind("tcp://*:" + port)
 print(f"Reducer {red_id} läuft auf Port {port}...")
 
 counts = {}
-signals_received = 0
-EXPECTED_MAPPERS = 3 #3 Mapper -> alle müssen ein Stop Signal senden, dann sind wir fertig
+#signals_received = 0
+#EXPECTED_MAPPERS = 3 #3 Mapper -> alle müssen ein Stop Signal senden, dann sind wir fertig
 
 while True:
     word = receiver.recv_string()
     
     if word == "STOP":
-        signals_received += 1
+        #signals_received += 1
         # Prüfen, ob alle Mapper das STOP Signal gesendet haben
-        if signals_received == EXPECTED_MAPPERS:
+        #if signals_received == EXPECTED_MAPPERS:
             # --- Endstand AUSGEBEN ---
-            print("\n" + "="*30)
-            print(f" ERGEBNIS {red_id}")
-            print("="*30)
-            for w in sorted(counts.keys()):
-                print(f"{w}: {counts[w]}")
-            print("="*30 + "\n")
-            
-            # Reset für den nächsten Lauf (falls man Splitter nochmal startet)
-            signals_received = 0
-            # Hinweis: 'counts' wird NICHT gelöscht, wir zählen einfach weiter hoch.
-            
-            # Wordcount resetten
-            signals_received = 0
-            counts = {}  # <--- HIER LÖSCHEN WIR DIE ALTEN DATEN
+        print("\n" + "="*30)
+        print(f" ERGEBNIS {red_id}")
+        print("="*30)
+        for w in sorted(counts.keys()):
+            print(f"{w}: {counts[w]}")
+        print("="*30 + "\n")
+        
+        # Reset für den nächsten Lauf
+        #signals_received = 0
+        
+        # Wordcount resetten
+        #signals_received = 0
+        counts = {} 
     else:
         # Wörter Zählen
         if word in counts:

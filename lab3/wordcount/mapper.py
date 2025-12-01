@@ -19,15 +19,13 @@ while True:
     
     # Wenn das Signal kommt: Weiterleiten an BEIDE Reducer
     if sentence == "STOP":
-        print("Signal 'STOP' empfangen -> Leite weiter...")
         sender1.send_string("STOP")
         sender2.send_string("STOP")
-        # WICHTIG: Kein break! Wir machen einfach weiter.
         continue
 
     # Normale Arbeit
     print(f"Verarbeite: {sentence}")
-    words = sentence.split()
+    words = sentence.replace(",", "").replace(".", "").split()
     
     for word in words:
         if word[0].lower() < 'm':

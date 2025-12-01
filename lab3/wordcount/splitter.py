@@ -24,19 +24,16 @@ sentences = [
 
 print("--- Start der Datenübertragung ---")
 
-# 1. Daten senden
-for _ in range(4):
-    sentence = random.choice(sentences)
+for sentence in sentences:
+    #sentence = random.choice(sentences)
     print(f"Sende: {sentence}")
     sender.send_string(sentence)
     time.sleep(0.1)
 
-# 2. Synchronisations-Signal senden
-# Wir senden 3x "STOP", damit jeder der 3 Mapper eins bekommt.
 print("--- Daten fertig. Sende STOP Signal ---")
-for _ in range(3):
-    sender.send_string("STOP")
+#for _ in range(3):
+sender.send_string("STOP")
 
-# Der Splitter beendet sich (sein Job ist getan), 
+# Der Splitter beendet sich
 # aber Mapper und Reducer bleiben wach für den nächsten Splitter-Lauf.
 print("Splitter beendet")
