@@ -42,7 +42,10 @@ class DummyChordClient:
 
         print(f"Client sucht Key {key} über Node {random_node_id}")
 
-        self.channel.send_to([random_node_id], (constChord.LOOKUP_REQ, key)) #sende Request
+        self.channel.send_to(     #sende Request mit origin
+            [random_node_id],
+            (constChord.LOOKUP_REQ, key, self.node_id)
+        )
 
         src, msg = self.channel.receive_from({random_node_id}) #warte Auf Antwort
 
