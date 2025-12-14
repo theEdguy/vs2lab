@@ -47,7 +47,7 @@ class DummyChordClient:
             (constChord.LOOKUP_REQ, key, self.node_id)
         )
 
-        src, msg = self.channel.receive_from({random_node_id}) #warte Auf Antwort
+        src, msg = self.channel.receive_from_any()        #Warte auf direkte Antwort der gesuchten Node
 
         print(f'Für Key {key} ist Node {msg[1]} zuständig!')
 
