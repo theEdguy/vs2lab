@@ -8,6 +8,7 @@ Chord Application
 """
 
 import logging
+import random
 import sys
 import multiprocessing as mp
 
@@ -29,11 +30,27 @@ class DummyChordClient:
         self.channel.bind(self.node_id)
 
     def run(self):
-        print("Implement me pls...")
+        #print("Implement me pls...")
+        #self.channel.send_to(  # a final multicast
+            #{i.decode() for i in list(self.channel.channel.smembers('node'))},
+            #constChord.STOP)
+        key = random.randint(0, self.channel.MAXPROC -1) #zufälligen Knoten aus allen auswählen
+
+        nodes_in_channel = list(self.channel.channel.smembers('node'))
+        #frage bei Redis-Server alle Einträge unter dem Schüssel 'node' ab
+        random_node_id = random.choice(nodes_in_channel).decode()
+
+        print(f"Client sucht Key {key} über Node {random_node_id}")
+
+        self.channel.send_to([random_node_id], (constChord.LOOKUP_REQ, key)) #sende Request
+
+        src, msg = self.channel.receive_from({random_node_id}) #warte Auf Antwort
+
+        print(f'Für Key {key} ist Node {msg[1]} zuständig!')
+
         self.channel.send_to(  # a final multicast
             {i.decode() for i in list(self.channel.channel.smembers('node'))},
             constChord.STOP)
-
 
 def create_and_run(num_bits, node_class, enter_bar, run_bar):
     """
