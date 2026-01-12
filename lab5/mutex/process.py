@@ -177,6 +177,8 @@ class Process:
                                                 .format(self.__mapid(), self.__mapid(p_id)))
                             if p_id in self.other_processes:
                                 self.other_processes.remove(p_id)
+                                self.queue = [x for x in self.queue if x[1] != p_id]
+                                self.__cleanup_queue() # Queue neu sortieren
                             if p_id in self.all_processes:
                                 self.all_processes.remove(p_id)
                 # Stay in CS for some time ...
