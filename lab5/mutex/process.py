@@ -123,6 +123,7 @@ class Process:
                 del (self.queue[0])  # Just remove first message
 
             self.__cleanup_queue()  # Finally sort and cleanup the queue
+            return True
         else:
             self.logger.info("{} timed out on RECEIVE. Local queue: {}".
                              format(self.__mapid(),
@@ -130,6 +131,7 @@ class Process:
                                         'Clock '+str(msg[0]),
                                         self.__mapid(msg[1]),
                                         msg[2]), self.queue))))
+            return False
 
     def init(self, peer_name, peer_type):
         self.channel.bind(self.process_id)
@@ -161,8 +163,22 @@ class Process:
 
                 self.__request_to_enter()
                 while not self.__allowed_to_enter():
-                    self.__receive()
+                    recieved_something = self.__receive()
+                    
+                    if not recieved_something:
+                        process_later = set([req[1] for req in self.queue[1:]])
 
+                        #wer fehlt?
+                        missing_processes = set(self.other_processes) - process_later
+
+                        #fehlenden Prozess löschen
+                        for p_id in missing_processes:
+                            self.logger.warning("{} detects crashed process {}. Removing it from process list."
+                                                .format(self.__mapid(), self.__mapid(p_id)))
+                            if p_id in self.other_processes:
+                                self.other_processes.remove(p_id)
+                            if p_id in self.all_processes:
+                                self.all_processes.remove(p_id)
                 # Stay in CS for some time ...
                 sleep_time = random.randint(0, 2000)
                 self.logger.debug("{} enters CS for {} milliseconds."
