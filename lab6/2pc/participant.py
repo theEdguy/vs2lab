@@ -2,115 +2,149 @@ import random
 import logging
 
 # coordinator messages
-from const2PC import VOTE_REQUEST, GLOBAL_COMMIT, GLOBAL_ABORT
-# participant decissions
-from const2PC import LOCAL_SUCCESS, LOCAL_ABORT
+from const3PC import VOTE_REQUEST, PREPARE_COMMIT, GLOBAL_COMMIT, GLOBAL_ABORT
+# participant decisions
+from const3PC import LOCAL_SUCCESS, LOCAL_ABORT
 # participant messages
-from const2PC import VOTE_COMMIT, VOTE_ABORT, NEED_DECISION
+from const3PC import VOTE_COMMIT, VOTE_ABORT, READY_COMMIT, NEED_DECISION
 # misc constants
-from const2PC import TIMEOUT
+from const3PC import TIMEOUT
 
 import stablelog
 
 
 class Participant:
     """
-    Implements a two phase commit participant.
-    - state written to stable log (but recovery is not considered)
-    - in case of coordinator crash, participants mutually synchronize states
-    - system blocks if all participants vote commit and coordinator crashes
-    - allows for partially synchronous behavior with fail-noisy crashes
+    Implements a three phase commit participant with termination protocol
+    after coordinator crash.
     """
 
     def __init__(self, chan):
         self.channel = chan
         self.participant = self.channel.join('participant')
-        self.stable_log = stablelog.create_log(
-            "participant-" + self.participant)
-        self.logger = logging.getLogger("vs2lab.lab6.2pc.Participant")
+        self.stable_log = stablelog.create_log("participant-" + self.participant)
+        self.logger = logging.getLogger("vs2lab.lab6.3pc.Participant")
         self.coordinator = {}
         self.all_participants = {}
         self.state = 'NEW'
 
     @staticmethod
     def _do_work():
-        # Simulate local activities that may succeed or not
-        return LOCAL_ABORT if random.random() > 2/3 else LOCAL_SUCCESS
+        # random decision: LOCAL_ABORT ~1/3, LOCAL_SUCCESS ~2/3
+        return LOCAL_ABORT if random.random() > 3/3 else LOCAL_SUCCESS
 
     def _enter_state(self, state):
-        self.stable_log.info(state)  # Write to recoverable persistant log file
-        self.logger.info("Participant {} entered state {}."
-                         .format(self.participant, state))
+        self.stable_log.info(state)
+        self.logger.info(f"Participant {self.participant} entered state {state}.")
         self.state = state
 
     def init(self):
         self.channel.bind(self.participant)
         self.coordinator = self.channel.subgroup('coordinator')
         self.all_participants = self.channel.subgroup('participant')
-        self._enter_state('INIT')  # Start in local INIT state.
+        self._enter_state('INIT')
 
     def run(self):
-        # Wait for start of joint commit
+        # wait for vote request from coordinator
+        final_decision = None
         msg = self.channel.receive_from(self.coordinator, TIMEOUT)
 
-        if not msg:  # Crashed coordinator - give up entirely
-            # decide to locally abort (before doing anything)
-            decision = LOCAL_ABORT
+        if not msg:
+            # Coordinator crashed before vote request -> abort
+            self._enter_state('ABORT')
+            return f"Participant {self.participant} terminated in ABORT due to LOCAL_ABORT."
 
-        else:  # Coordinator requested to vote, joint commit starts
-            assert msg[1] == VOTE_REQUEST
+        assert msg[1] == VOTE_REQUEST
+        decision = self._do_work()
 
-            # Firstly, come to a local decision
-            decision = self._do_work()  # proceed with local activities
+        if decision == LOCAL_ABORT:
+            self._enter_state('ABORT')
+            self.channel.send_to(self.coordinator, VOTE_ABORT)
+            return f"Participant {self.participant} terminated in ABORT due to LOCAL_ABORT."
 
-            # If local decision is negative,
-            # then vote for abort and quit directly
-            if decision == LOCAL_ABORT:
-                self.channel.send_to(self.coordinator, VOTE_ABORT)
+        # Local SUCCESS -> READY
+        self._enter_state('READY')
+        self.channel.send_to(self.coordinator, VOTE_COMMIT)
 
-            # If local decision is positive,
-            # we are ready to proceed the joint commit
+        # wait for PREPARE_COMMIT or GLOBAL_ABORT
+        msg = self.channel.receive_from(self.coordinator, TIMEOUT)
+        if not msg:
+            # Coordinator crashed: begin termination protocol
+            # Step 1: Determine new coordinator (lowest ID)
+            new_coordinator = min(map(int, self.all_participants))
+            # Step 2: New coordinator announces its state to all
+            if self.participant == new_coordinator:
+                # Map Participant-State auf Koordinator-State für Termination
+                if self.state in ['INIT', 'READY']:
+                    pk_state = 'WAIT'        # Fall 1: Teilnehmer noch nicht PRECOMMIT oder COMMIT
+                elif self.state == 'PRECOMMIT':
+                    pk_state = 'PRECOMMIT'   # Fall 2: Teilnehmer war bereit zum Commit
+                elif self.state == 'COMMIT':
+                    pk_state = 'COMMIT'      # Fall 3: bereits COMMIT
+                else:
+                    pk_state = 'ABORT'        # Fallback: alles andere (inklusive ABORT) → ABORT
+
+                # Ankündigung des States an alle Teilnehmer
+                self.channel.send_to(self.all_participants, pk_state)
+                print(f"P_k (new coordinator) is {self.participant} with mapped state {pk_state}")
+
+                # Final decision basierend auf pk_state
+                if pk_state == 'WAIT':
+                    final_state = 'ABORT'
+                    final_decision = GLOBAL_ABORT
+                elif pk_state == 'PRECOMMIT':
+                    final_state = 'COMMIT'
+                    final_decision = GLOBAL_COMMIT
+                else:  # COMMIT oder ABORT
+                    final_state = pk_state
+                    final_decision = GLOBAL_COMMIT if pk_state == 'COMMIT' else GLOBAL_ABORT
+
+                # Entscheidung an alle senden
+                self.channel.send_to(self.all_participants, final_decision)
+                self._enter_state(final_state)
+
             else:
-                assert decision == LOCAL_SUCCESS
-                self._enter_state('READY')
+                    # I am not the new coordinator: wait for state announcement
+                    msg = self.channel.receive_from(self.all_participants, TIMEOUT)
+                    if msg:
+                        pk_state = msg[1]
+                        # Adjust own state if behind
+                        state_order = ['INIT', 'READY', 'PRECOMMIT', 'COMMIT', 'ABORT']
+                        if state_order.index(self.state) < state_order.index(pk_state):
+                            self._enter_state(pk_state)
 
-                # Notify coordinator about local commit vote
-                self.channel.send_to(self.coordinator, VOTE_COMMIT)
+                    # wait for final decision from new coordinator
+                    msg = self.channel.receive_from(self.all_participants, TIMEOUT)
+                    if msg and msg[1] in [GLOBAL_COMMIT, GLOBAL_ABORT]:
+                        final_decision = msg[1]
+                        self._enter_state('COMMIT' if final_decision == GLOBAL_COMMIT else 'ABORT')
 
-                # Wait for coordinator to notify the final outcome
-                msg = self.channel.receive_from(self.coordinator, TIMEOUT)
-
-                if not msg:  # Crashed coordinator
-                    # Ask all processes for their decisions
-                    self.channel.send_to(self.all_participants, NEED_DECISION)
-                    while True:
-                        msg = self.channel.receive_from_any()
-                        # If someone reports a final decision,
-                        # we locally adjust to it
-                        if msg[1] in [
-                                GLOBAL_COMMIT, GLOBAL_ABORT, LOCAL_ABORT]:
-                            decision = msg[1]
-                            break
-
-                else:  # Coordinator came to a decision
-                    decision = msg[1]
-
-        # Change local state based on the outcome of the joint commit protocol
-        # Note: If the protocol has blocked due to coordinator crash,
-        # we will never reach this point
-        if decision == GLOBAL_COMMIT:
+                    return f"Participant {self.participant} terminated in state {self.state} due to {final_decision}."
+        # normal path
+        decision = msg[1]
+        final_decision = decision
+        if decision == GLOBAL_ABORT:
+            self._enter_state('ABORT')
+        elif decision == PREPARE_COMMIT:
+            self._enter_state('PRECOMMIT')
+            self.channel.send_to(self.coordinator, READY_COMMIT)
+            msg = self.channel.receive_from(self.coordinator, TIMEOUT)
+            if msg and msg[1] == GLOBAL_COMMIT:
+                self._enter_state('COMMIT')
+            else:
+                self._enter_state('ABORT')
+                decision = 'PREPARE_COMMIT timeout'
+        elif decision == GLOBAL_COMMIT:
             self._enter_state('COMMIT')
         else:
-            assert decision in [GLOBAL_ABORT, LOCAL_ABORT]
             self._enter_state('ABORT')
+            decision = 'unknown decision'
 
-        # Help any other participant when coordinator crashed
-        num_of_others = len(self.all_participants) - 1
-        while num_of_others > 0:
-            num_of_others -= 1
-            msg = self.channel.receive_from(self.all_participants, TIMEOUT * 2)
-            if msg and msg[1] == NEED_DECISION:
-                self.channel.send_to({msg[0]}, decision)
+        # respond to NEED_DECISION messages
+        for p in self.all_participants:
+            if p != self.participant:
+                msg = self.channel.receive_from({p}, TIMEOUT)
+                if msg and msg[1] == NEED_DECISION:
+                    self.channel.send_to({msg[0]}, decision)
 
-        return "Participant {} terminated in state {} due to {}.".format(
-            self.participant, self.state, decision)
+        return f"Participant {self.participant} terminated in state {self.state} due to {decision}."
