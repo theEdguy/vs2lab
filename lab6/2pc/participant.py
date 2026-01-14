@@ -45,8 +45,9 @@ class Participant:
         self._enter_state('INIT')
 
     def run(self):
-        # wait for vote request from coordinator
         final_decision = None
+
+        # wait for vote request from coordinator
         msg = self.channel.receive_from(self.coordinator, TIMEOUT)
 
         if not msg:
@@ -70,59 +71,59 @@ class Participant:
         msg = self.channel.receive_from(self.coordinator, TIMEOUT)
         if not msg:
             # Coordinator crashed: begin termination protocol
-            # Step 1: Determine new coordinator (lowest ID)
             new_coordinator = min(map(int, self.all_participants))
-            # Step 2: New coordinator announces its state to all
-            if self.participant == new_coordinator:
-                # Map Participant-State auf Koordinator-State für Termination
+
+            if int(self.participant) == new_coordinator:
+                # Map Participant-State auf Koordinator-State
                 if self.state in ['INIT', 'READY']:
-                    pk_state = 'WAIT'        # Fall 1: Teilnehmer noch nicht PRECOMMIT oder COMMIT
+                    pk_state = 'WAIT'
                 elif self.state == 'PRECOMMIT':
-                    pk_state = 'PRECOMMIT'   # Fall 2: Teilnehmer war bereit zum Commit
+                    pk_state = 'PRECOMMIT'
                 elif self.state == 'COMMIT':
-                    pk_state = 'COMMIT'      # Fall 3: bereits COMMIT
+                    pk_state = 'COMMIT'
                 else:
-                    pk_state = 'ABORT'        # Fallback: alles andere (inklusive ABORT) → ABORT
+                    pk_state = 'ABORT'
 
-                # Ankündigung des States an alle Teilnehmer
+                print(f"P_k (new coordinator) is {self.participant} with coordinator state {pk_state}")
+
                 self.channel.send_to(self.all_participants, pk_state)
-                print(f"P_k (new coordinator) is {self.participant} with mapped state {pk_state}")
 
-                # Final decision basierend auf pk_state
                 if pk_state == 'WAIT':
                     final_state = 'ABORT'
                     final_decision = GLOBAL_ABORT
                 elif pk_state == 'PRECOMMIT':
                     final_state = 'COMMIT'
                     final_decision = GLOBAL_COMMIT
-                else:  # COMMIT oder ABORT
+                else:
                     final_state = pk_state
                     final_decision = GLOBAL_COMMIT if pk_state == 'COMMIT' else GLOBAL_ABORT
 
-                # Entscheidung an alle senden
                 self.channel.send_to(self.all_participants, final_decision)
                 self._enter_state(final_state)
 
             else:
-                    # I am not the new coordinator: wait for state announcement
-                    msg = self.channel.receive_from(self.all_participants, TIMEOUT)
-                    if msg:
-                        pk_state = msg[1]
-                        # Adjust own state if behind
-                        state_order = ['INIT', 'READY', 'PRECOMMIT', 'COMMIT', 'ABORT']
+                # wait for state announcement
+                msg = self.channel.receive_from(self.all_participants, TIMEOUT)
+                if msg is not None:  # ✅ Änderung 1
+                    pk_state = msg[1]
+                    state_order = ['INIT', 'READY', 'PRECOMMIT', 'COMMIT', 'ABORT']
+
+                    if pk_state in state_order:  # ✅ Änderung 2
                         if state_order.index(self.state) < state_order.index(pk_state):
                             self._enter_state(pk_state)
 
-                    # wait for final decision from new coordinator
-                    msg = self.channel.receive_from(self.all_participants, TIMEOUT)
-                    if msg and msg[1] in [GLOBAL_COMMIT, GLOBAL_ABORT]:
-                        final_decision = msg[1]
-                        self._enter_state('COMMIT' if final_decision == GLOBAL_COMMIT else 'ABORT')
+                # wait for final decision
+                msg = self.channel.receive_from(self.all_participants, TIMEOUT)
+                if msg is not None and msg[1] in [GLOBAL_COMMIT, GLOBAL_ABORT]:
+                    final_decision = msg[1]
+                    self._enter_state('COMMIT' if final_decision == GLOBAL_COMMIT else 'ABORT')
 
-                    return f"Participant {self.participant} terminated in state {self.state} due to {final_decision}."
+            return f"Participant {self.participant} terminated in state {self.state} due to {final_decision}."
+
         # normal path
         decision = msg[1]
         final_decision = decision
+
         if decision == GLOBAL_ABORT:
             self._enter_state('ABORT')
         elif decision == PREPARE_COMMIT:
