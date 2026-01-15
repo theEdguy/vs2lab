@@ -35,12 +35,12 @@ class Coordinator:
         self.participants = self.channel.subgroup('participant')
 
     def run(self):
-        if random.random() > 3/3:  # simulate a crash
+        if random.random() > 1/3:  # simulate a crash
             return "Coordinator crashed in state INIT."
         # Phase 1a: send vote request
         self._enter_state('WAIT')
         self.channel.send_to(self.participants, VOTE_REQUEST)
-        if random.random() > 0/3:  # simulate a crash
+        if random.random() > 1/3:  # simulate a crash
             return "Coordinator crashed in state WAIT."
 
         # Phase 1b/2a: collect votes
@@ -61,7 +61,7 @@ class Coordinator:
         # Phase 2a/3a: send PRECOMMIT
         self._enter_state('PRECOMMIT')
         self.channel.send_to(self.participants, PREPARE_COMMIT)
-        if random.random() > 0/3:  # simulate a crash
+        if random.random() > 1/3:  # simulate a crash
             return "Coordinator crashed in state PRECOMMIT."
 
         # Phase 3a: wait for READY_COMMIT responses

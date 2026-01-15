@@ -31,7 +31,7 @@ class Participant:
     @staticmethod
     def _do_work():
         # random decision: LOCAL_ABORT ~1/3, LOCAL_SUCCESS ~2/3
-        return LOCAL_ABORT if random.random() > 3/3 else LOCAL_SUCCESS
+        return LOCAL_ABORT if random.random() > 1/3 else LOCAL_SUCCESS
 
     def _enter_state(self, state):
         self.stable_log.info(state)
@@ -104,11 +104,11 @@ class Participant:
             else:
                 # wait for state announcement
                 msg = self.channel.receive_from(self.all_participants, TIMEOUT)
-                if msg is not None:  # ✅ Änderung 1
+                if msg is not None: 
                     pk_state = msg[1]
                     state_order = ['INIT', 'READY', 'PRECOMMIT', 'COMMIT', 'ABORT']
 
-                    if pk_state in state_order:  # ✅ Änderung 2
+                    if pk_state in state_order:
                         if state_order.index(self.state) < state_order.index(pk_state):
                             self._enter_state(pk_state)
 
